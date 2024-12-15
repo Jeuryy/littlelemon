@@ -6,7 +6,7 @@ import './Header.css'
 const Header = () => {
     return (
         <header>
-            <img src={logo} alt="Logo Littlelemon"/>
+            <img src={logo} alt="Logo Littlelemon" className="header-img"/>
             <Nav/>
         </header>
     )

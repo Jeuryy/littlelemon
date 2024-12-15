@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Nav.css";
 import { useMediaQuery } from "react-responsive";
 import { CiMenuBurger } from "react-icons/ci";
+import logo from '../assets/icons_assets/Logo.svg'
 
 const links = [
     { href: "/Home", label: "Home" },
@@ -22,6 +23,7 @@ return (
     {isMobile ? (
         <div>
             <CiMenuBurger className="burger-menu" onClick={toggleMenu} />
+            <img src={logo} alt="Logo Littlelemon"/>
             <ul className={`mobile-menu ${menuOpen ? "open" : ""}`}>
                 {links.map((link, index) => (
                     <li key={index}>

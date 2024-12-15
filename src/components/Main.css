@@ -1,0 +1,84 @@
+main{
+margin: 50px 0;
+}
+main .main-description{
+    display: flex;
+    justify-content: center;
+    max-height: 320px;
+    margin-bottom: 100px;
+    background-color: var(--secondary-color);
+}
+main .main-description .text{
+    margin-top: 50px;
+    margin-right: 75px;
+}
+main .main-description h2{
+    font-family: var(--font);
+    font-size: 42px;
+    font-weight: 100;
+    color: var(--primary-color);
+    text-align: left;
+    margin: 0;
+}
+main .main-description h3{
+    font-family: var(--font);
+    font-size: 32px;
+    font-weight: 100;
+    color: #FFF;
+    text-align: left;
+    margin: 0;
+}
+main .main-description p{
+    font-family: var(--font);
+    font-size: 22px;
+    color: #FFF;
+    max-width: 300px;
+    text-align: left;
+}
+main .main-description a{
+    background-color: var(--primary-color);
+    font-family: var(--font);
+    font-size: 18px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+main .main-description a:hover{
+    font-weight: bold;
+    transition: .2s;
+}
+
+main .main-description .img{
+    margin-left: 75px;
+    margin-top: 65px;
+}
+main .main-description .img img{
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 700px) {
+    main .main-description .text{
+        margin-right: 25px;
+    }
+    main .main-description .img{
+        margin-left: 25px;
+    }
+}
+@media screen and (max-width: 600px) {
+    main .main-description{
+        max-height: 100%;
+        flex-direction: column;
+    }
+    main .main-description .text{
+        margin: 50px;
+    }
+    main .main-description .img{
+        margin: auto;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}

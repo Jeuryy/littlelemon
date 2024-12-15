@@ -36,6 +36,7 @@ li {
 .burger-menu {
     font-size: 2rem;
     cursor: pointer;
+    margin-right: 15px;
 }
 
 .mobile-menu {

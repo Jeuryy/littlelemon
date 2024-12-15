@@ -1,6 +1,6 @@
 footer{
-    position: absolute;
-    bottom: 0%;
+    /*position: absolute;
+    bottom: 0%;*/
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -59,9 +59,9 @@ footer div{
 }
 
 @media screen and (max-width: 450px) {
-    footer{
+    /*footer{
         position: relative;
-    }
+    }*/
     footer .footer-links{
         flex-direction: column;
     }
