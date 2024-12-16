@@ -4,7 +4,7 @@ margin: 50px 0;
 main .main-description{
     display: flex;
     justify-content: center;
-    max-height: 320px;
+    max-height: 340px;
     margin-bottom: 100px;
     background-color: var(--secondary-color);
 }
@@ -35,7 +35,7 @@ main .main-description p{
     max-width: 300px;
     text-align: left;
 }
-main .main-description a{
+main .main-description a, .cards-header a{
     background-color: var(--primary-color);
     font-family: var(--font);
     font-size: 18px;
@@ -43,9 +43,11 @@ main .main-description a{
     border: none;
     border-radius: 10px;
     text-decoration: none;
+    color: #000;
+    margin-bottom: 0;
 }
 
-main .main-description a:hover{
+main .main-description a:hover, .cards-header a:hover{
     font-weight: bold;
     transition: .2s;
 }
@@ -58,6 +60,18 @@ main .main-description .img img{
     max-width: 400px;
     max-height: 300px;
     border-radius: 25px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 @media screen and (max-width: 700px) {
@@ -80,5 +94,14 @@ main .main-description .img img{
         margin: auto;
         text-align: center;
         margin-bottom: 50px;
+    }
+    main .main-description p{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cards-header{
+        flex-direction: column;
     }
 }
