@@ -1,4 +1,6 @@
 import  './Box.css'
+import { RiEBike2Fill } from "react-icons/ri";
+
 
 const Box = (props) => {
     return (
@@ -9,7 +11,7 @@ const Box = (props) => {
                 <p className="box-price">{props.price}</p>
             </div>
             <p className="box-description">{props.description}</p>
-            <a className="box-button" href='/Order'>Order</a>
+            <a className="box-button" href='/Order'>Order a delivery <RiEBike2Fill /></a>
         </div>
     )
 

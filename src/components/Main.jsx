@@ -1,17 +1,24 @@
 import React from "react";
 import mainImage from '../assets/icons_assets/restauranfood.jpg'
 import Box from "./Box";
+import Testimonials from "./Testimonials";
 import './Main.css'
+import greekSalad from '../assets/icons_assets/greek salad.jpg'
+import bruchetta from '../assets/icons_assets/bruchetta.svg'
+import lemonSalad from '../assets/icons_assets/lemon dessert.jpg'
+
+
 //import img from '../assets/icons_assets/bruchetta.svg'
 
-const Main = () => {
+const Main = (props) => {
+    const testimonials = props.testimonials
     return (
         <main>
             <div className="main-description">
                 <div className="text">
                     <h2>Little Lemon</h2>
                     <h3>Chicago</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. </p>
                     <a href="/Reservations">Reserve a table</a>
                 </div>
                 <div className="img">
@@ -24,43 +31,25 @@ const Main = () => {
             </div>
             <div className="cards">
                 <Box
-                    src={mainImage}
+                    src={greekSalad}
                     alt="img alt"
-                    name="Dishname"
+                    name="Greek Salad"
                     price="$12.50"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                    description="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. "/>
                 <Box
-                    src={mainImage}
+                    src={bruchetta}
                     alt="img alt"
-                    name="Dishname"
+                    name="Bruchetta"
                     price="$12.50"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                    description="Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."/>
                 <Box
-                    src={mainImage}
+                    src={lemonSalad}
                     alt="img alt"
-                    name="Dishname"
+                    name="Lemon Dessert"
                     price="$12.50"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
-                <Box
-                    src={mainImage}
-                    alt="img alt"
-                    name="Dishname"
-                    price="$12.50"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
-                <Box
-                    src={mainImage}
-                    alt="img alt"
-                    name="Dishname"
-                    price="$12.50"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
-                <Box
-                    src={mainImage}
-                    alt="img alt"
-                    name="Dishname"
-                    price="$12.50"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                    description="This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined."/>
             </div>
-
+            <Testimonials testimonials={testimonials}/>
         </main>
     )
 }
