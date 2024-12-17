@@ -3,9 +3,10 @@ import "./Nav.css";
 import { useMediaQuery } from "react-responsive";
 import { CiMenuBurger } from "react-icons/ci";
 import logo from '../assets/icons_assets/Logo.svg'
+import {Link } from "react-router-dom";
 
 const links = [
-    { href: "/Home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "/About", label: "About" },
     { href: "/Reservations", label: "Reservations" },
     { href: "/order_online", label: "Order online" },
@@ -27,7 +28,7 @@ return (
             <ul className={`mobile-menu ${menuOpen ? "open" : ""}`}>
                 {links.map((link, index) => (
                     <li key={index}>
-                        <a href={link.href}>{link.label}</a>
+                        <Link to={link.href}>{link.label}</Link>
                     </li>
                 ))}
             </ul>
@@ -36,7 +37,7 @@ return (
         <ul className="desktop-menu">
             {links.map((link, index) => (
             <li key={index}>
-                <a href={link.href}>{link.label}</a>
+                <Link to={link.href}>{link.label}</Link>
             </li>
             ))}
         </ul>

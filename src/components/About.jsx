@@ -4,7 +4,7 @@ import restaurant from '../assets/icons_assets/restaurant.jpg'
 
 const About = () => {
     return (
-        <div className="about-description">
+        <div className="about-description" id='About'>
             <div className="text">
                 <h2>Little Lemon</h2>
                 <h3>Chicago</h3>

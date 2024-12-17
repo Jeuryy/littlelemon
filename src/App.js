@@ -4,6 +4,9 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
 import About from './components/About';
+import HomePage from './components/HomePage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NotFound from './components/NotFound';
 
 function App() {
 const [testimonials, setTestimonials] = useState([]);
@@ -17,12 +20,13 @@ useEffect(() => {
 }, [])
 
   return (
-      <div className="App">
-        <Header/>
-        <Main testimonials={testimonials}/>
-        <About/>
-        <Footer/>
-      </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage  testimonials={testimonials}/>}/>
+        <Route path="*" element={<NotFound/>} />
+      </Routes>
+    </BrowserRouter>
+
 
   );
 }

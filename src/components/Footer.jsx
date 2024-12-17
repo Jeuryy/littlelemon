@@ -2,9 +2,10 @@ import React from "react";
 import logo from '../assets/icons_assets/Logo.svg'
 import './Footer.css'
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 const links = [
-    { href: "/Home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "/About", label: "About" },
     { href: "/Reservations", label: "Reservations" },
     { href: "/order_online", label: "Order online" },
@@ -24,7 +25,7 @@ const Footer = () => {
                     <ul>
                     {links.map((link, index) => (
                         <li key={index}>
-                            <a href={link.href}>{link.label}</a>
+                            <Link to={link.href}>{link.label}</Link>
                         </li>
                     ))}
                     </ul>

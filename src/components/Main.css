@@ -61,7 +61,9 @@ main .main-description .img img{
     max-height: 300px;
     border-radius: 25px;
 }
-
+main .main-description .img img:hover{
+    transform: translate(-20px, 20px);
+}
 .cards{
     display: flex;
     flex-wrap: wrap;
