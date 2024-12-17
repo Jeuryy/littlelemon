@@ -41,10 +41,10 @@ const Footer = () => {
                 <div>
                     <h4>Social Media</h4>
                     <ul>
-                        <li><a href="/link">Instagram</a></li>
-                        <li><a href="/link">Facebook</a></li>
-                        <li><a href="/link">Twitter</a></li>
-                        <li><a href="/link">Website</a></li>
+                        <li><a href="/link" target="_blank">Instagram</a></li>
+                        <li><a href="/link" target="_blank">Facebook</a></li>
+                        <li><a href="/link" target="_blank">Twitter</a></li>
+                        <li><a href="/link" target="_blank">Website</a></li>
                     </ul>
                 </div>
             </div>
