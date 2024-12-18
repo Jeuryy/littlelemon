@@ -8,6 +8,7 @@ import HomePage from './components/HomePage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from './components/NotFound';
 import AboutPage from './components/AboutPage';
+import BookingPage from './components/BookingPage';
 
 function App() {
 const [testimonials, setTestimonials] = useState([]);
@@ -25,6 +26,7 @@ useEffect(() => {
       <Routes>
         <Route path='/' element={<HomePage  testimonials={testimonials}/>}/>
         <Route path='/About' element={<AboutPage/>}/>
+        <Route path='/Reservations' element={<BookingPage/>}/>
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>

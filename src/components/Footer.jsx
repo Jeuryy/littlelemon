@@ -1,7 +1,6 @@
 import React from "react";
 import logo from '../assets/icons_assets/Logo.svg'
 import './Footer.css'
-import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 const links = [

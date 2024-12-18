@@ -6,6 +6,7 @@ import './Main.css'
 import greekSalad from '../assets/icons_assets/greek salad.jpg'
 import bruchetta from '../assets/icons_assets/bruchetta.svg'
 import lemonSalad from '../assets/icons_assets/lemon dessert.jpg'
+import menu from '../assets/menu.pdf'
 
 
 //import img from '../assets/icons_assets/bruchetta.svg'
@@ -27,7 +28,7 @@ const Main = (props) => {
             </div>
             <div className="cards-header">
                 <h1>This week's specials</h1>
-                <a href="/menu">Online menu</a>
+                <a href={menu} target="_blank" rel="noreferrer">Online menu</a>
             </div>
             <div className="cards">
                 <Box
