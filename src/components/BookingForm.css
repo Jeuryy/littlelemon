@@ -1,0 +1,11 @@
+.booking-form-container{
+    font-family: var(--font);
+    background-color: var(--secondary-color);
+}
+.booking-form-container h1{
+    color: #FFF;
+    letter-spacing: 1px;
+}
+/*.booking-form-container form {
+
+}*/
