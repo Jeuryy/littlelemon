@@ -3,6 +3,7 @@ import './BookingForm.css'
 
 const BookingForm = () => {
 const [formData, setFormData] = useState({
+    name: '',
     date: '',
     time: '',
     guests: 1,
@@ -41,10 +42,42 @@ const handleSubmit = (e) => {
     console.log(formData);
 }
 
+const handleReset = (e) => {
+    e.preventDefault();
+    setFormData({
+        ...formData,
+        name: '',
+        date: '',
+        time: '',
+        guests: 1,
+        occasion: '',
+        mobile: '',
+        email: ''
+    });
+    setError('');
+}
+
     return (
         <div className='booking-form-container'>
             <h1>Book a reservation!</h1>
             <form>
+                <label htmlFor='name'>Name</label>
+                <input
+                    type='text'
+                    name='name'
+                    id='name'
+                    value={formData.name}
+                    placeholder='John Doe'
+                    onChange={handleChange}/>
+                <label htmlFor='occasion'>Select an occasion</label>
+                <select
+                    id='occasion'
+                    name='occasion'
+                    value={formData.occasion}
+                    onChange={handleChange}>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                </select>
                 <label htmlFor='date'>Date</label>
                 <input
                     type='date'
@@ -68,21 +101,14 @@ const handleSubmit = (e) => {
                     id='guests'
                     value={formData.guests}
                     onChange={handleChange}/>
-                <label htmlFor='occasion'>Select an occasion</label>
-                <select
-                    id='occasion'
-                    name='occasion'
-                    value={formData.occasion}
-                    onChange={handleChange}>
-                    <option value="Birthday">Birthday</option>
-                    <option value="Anniversary">Anniversary</option>
-                </select>
+                    <p className='guests'>{formData.guests}</p>
                 <label htmlFor='mobile'>Mobile</label>
                 <input
                     type='text'
                     name='mobile'
                     id='mobile'
                     value={formData.mobile}
+                    placeholder='XXX-XXX-XXXX'
                     onChange={handleChange}/>
                 <label htmlFor='email'>Email</label>
                 <input
@@ -90,8 +116,12 @@ const handleSubmit = (e) => {
                     name='email'
                     id='email'
                     value={formData.email}
+                    placeholder='email@email.com'
                     onChange={handleChange}/>
-                <button type='submit' onClick={handleSubmit}>Book</button>
+                <div className='buttons'>
+                    <button onClick={handleReset} className='reset'>Reset</button>
+                    <button type='submit' onClick={handleSubmit} className='book'>Book</button>
+                </div>
                 {error && <p>{error}</p>}
             </form>
         </div>
