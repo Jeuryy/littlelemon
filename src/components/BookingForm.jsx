@@ -2,16 +2,19 @@ import { useState } from 'react';
 import './BookingForm.css'
 
 const BookingForm = () => {
-const [formData, setFormData] = useState({
-    name: '',
-    date: '',
-    time: '',
-    guests: 1,
-    occasion: '',
-    mobile: '',
-    email: ''
-});
-const [error, setError] = useState('')
+    const [availableTimes, setAvailableTimes] = useState ([
+        '15:00', '16:00', '17:00', '18:00', '19:00',
+        '20:00', '21:00', '22:00', '23:00'])
+    const [formData, setFormData] = useState({
+        name: '',
+        date: '',
+        time: '',
+        guests: 1,
+        occasion: '',
+        mobile: '',
+        email: ''
+    });
+    const [error, setError] = useState('')
 
 const handleChange = (e) => {
     const {name, value} = e.target;
@@ -38,7 +41,6 @@ const handleSubmit = (e) => {
     }
 
     setError('');
-    console.log('Form sent');
     console.log(formData);
 }
 
@@ -68,6 +70,7 @@ const handleReset = (e) => {
                     id='name'
                     value={formData.name}
                     placeholder='John Doe'
+                    maxLength={40}
                     onChange={handleChange}/>
                 <label htmlFor='occasion'>Select an occasion</label>
                 <select
@@ -84,14 +87,20 @@ const handleReset = (e) => {
                     name='date'
                     id='date'
                     value={formData.date}
+                    min={new Date().toISOString().slice(0, 10)}
                     onChange={handleChange}/>
                 <label htmlFor='time'>Time</label>
-                <input
-                    type='time'
-                    name='time'
+                <select
                     id='time'
+                    name='time'
                     value={formData.time}
-                    onChange={handleChange}/>
+                    onChange={handleChange}>
+                    {availableTimes.map((e, index) => (
+                        <option key={index} value={e}>
+                        {e}
+                        </option>
+                    ))}
+                </select>
                 <label htmlFor='guests'>Guests</label>
                 <input
                     type='range'
@@ -104,11 +113,12 @@ const handleReset = (e) => {
                     <p className='guests'>{formData.guests}</p>
                 <label htmlFor='mobile'>Mobile</label>
                 <input
-                    type='text'
+                    type='tel'
                     name='mobile'
                     id='mobile'
                     value={formData.mobile}
                     placeholder='XXX-XXX-XXXX'
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     onChange={handleChange}/>
                 <label htmlFor='email'>Email</label>
                 <input

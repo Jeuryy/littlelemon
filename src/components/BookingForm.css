@@ -29,6 +29,7 @@
 }
 .booking-form-container form #guests {
     margin-bottom: 0;
+    accent-color: var(--primary-color);
 }
 .booking-form-container form .guests {
     margin-top: 0;
@@ -43,6 +44,12 @@
     border-radius: 10px;
     height: 30px;
 }
+.booking-form-container form input:focus, select:focus {
+    outline: none;
+    border: 3px solid var(--primary-color);
+    transition: .1s;
+}
+
 .booking-form-container form .buttons {
     display: flex;
     justify-content: center;
