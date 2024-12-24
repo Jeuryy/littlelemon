@@ -112,7 +112,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    color: #000000;
+    color: var(--secondary-color);
     font-size: 22px;
     text-decoration: none;
     font-family: "Markazi Text", serif;
@@ -132,5 +132,10 @@ cursor: pointer;
 @media screen and (max-width: 700px) {
     .booking-form-container form {
         min-width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .booking-form .alert{
+        margin: 30px;
     }
 }

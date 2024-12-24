@@ -104,6 +104,7 @@ const handleReset = (e) => {
                         onChange={handleChange}>
                         <option value="Birthday">Birthday</option>
                         <option value="Anniversary">Anniversary</option>
+                        <option value="Date">Casual</option>
                     </select>
                     <label htmlFor='date'>Date</label>
                     <input
