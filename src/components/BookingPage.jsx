@@ -4,13 +4,14 @@ import './BookingPage.css'
 import Footer from './Footer';
 import Header from './Header';
 
-const BookingPage = () => {
+const BookingPage = (props) => {
+    const availableTimes = props.availableTimes;
+    const dispatch = props.dispatch
 
     return (
         <div>
             <Header/>
-            <div> Booking Page</div>
-            <BookingForm/>
+            <BookingForm availableTimes={availableTimes} dispatch={dispatch}/>
             <Footer/>
         </div>
     )

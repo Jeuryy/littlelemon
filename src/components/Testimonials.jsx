@@ -14,7 +14,7 @@ const Testimonials = (props) => {
             {testimonials.map((e, index) => (
                 <div key={index} className='testimonial'>
                     <p className='rating'><i>Rating: </i>{Array.from({length: e.rating}, (_, index) => (
-                        <FaRegStar className='star'/>
+                        <FaRegStar key={index} className='star'/>
                     ))}
                     </p>
                     <div className='avatar-name'>
