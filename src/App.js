@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from './components/NotFound';
 import AboutPage from './components/AboutPage';
 import BookingPage from './components/BookingPage';
+import { fetchAPI } from './api';
 
 const updateTimes = (state, action) => {
   switch (action.type){
@@ -17,13 +18,13 @@ const updateTimes = (state, action) => {
 };
 
 const initializeTimes = () => {
-  /*const today = new Date();
+  const today = new Date();
 
-  fetchAPI(new Date());*/
+  fetchAPI(today);
 
-  return [
+  /*return [
     '15:00', '16:00', '17:00', '18:00', '19:00',
-    '20:00', '21:00', '22:00', '23:00'];
+    '20:00', '21:00', '22:00', '23:00'];*/
 };
 
 
@@ -40,6 +41,9 @@ useEffect(() => {
   })
 }, [])
 
+/*useEffect(() => {
+  console.log(fetchAPI(new Date()))
+}, [])*/
 
   return (
     <BrowserRouter>
