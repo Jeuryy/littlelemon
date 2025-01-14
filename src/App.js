@@ -15,16 +15,21 @@ const updateTimes = (state, action) => {
       return state;
   }
 };
+
 const initializeTimes = () => {
+  /*const today = new Date();
+
+  fetchAPI(new Date());*/
+
   return [
     '15:00', '16:00', '17:00', '18:00', '19:00',
     '20:00', '21:00', '22:00', '23:00'];
 };
 
+
 function App() {
 
 const [testimonials, setTestimonials] = useState([]);
-
 const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes)
 
 useEffect(() => {
@@ -34,6 +39,7 @@ useEffect(() => {
     setTestimonials(data)
   })
 }, [])
+
 
   return (
     <BrowserRouter>
