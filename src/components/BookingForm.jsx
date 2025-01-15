@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './BookingForm.css'
 import Alert from '@mui/material/Alert';
 import { AlertTitle } from '@mui/material';
@@ -7,6 +7,7 @@ import { IoReturnUpBackOutline } from "react-icons/io5";
 
 const BookingForm = (props) => {
     const availableTimes = props.availableTimes;
+
     const dispatch = props.dispatch;
     const [formData, setFormData] = useState({
         name: '',
@@ -120,7 +121,7 @@ const handleReset = (e) => {
                         name='time'
                         value={formData.time}
                         onChange={handleChange}>
-                        {availableTimes.map((time, index) => (
+                        {formData.date && availableTimes.map((time, index) => (
                             <option key={index} value={time}>
                             {time}
                             </option>
@@ -154,8 +155,8 @@ const handleReset = (e) => {
                         placeholder='email@email.com'
                         onChange={handleChange}/>
                     <div className='buttons'>
-                        <button onClick={handleReset} className='reset'>Reset</button>
                         <button type='submit' className='book'>Book</button>
+                        <button onClick={handleReset} className='reset'>Reset</button>
                     </div>
                     {error && <p>{error}</p>}
                 </form>

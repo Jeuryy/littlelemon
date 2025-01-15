@@ -11,7 +11,10 @@ const updateTimes = (state, action) => {
   switch (action.type){
     case 'UPDATE_TIMES':
       const selectedDate = action.payload;
-      return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '00:00']
+      const updatedTimes = fetchAPI(new Date(selectedDate));
+      return updatedTimes;
+      /*fetchAPI(new Date(selectedDate));
+      break;*/
     default:
       return state;
   }

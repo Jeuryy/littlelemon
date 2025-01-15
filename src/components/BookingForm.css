@@ -68,6 +68,7 @@
 .booking-form-container form .buttons .book{
     background-color: #097f21;
     color: #FFF;
+    font-weight: 600;
 }
 .booking-form-container form .buttons .book:hover{
     background-color: #149d2f;
@@ -75,7 +76,8 @@
     transition: .2s;
 }
 .booking-form-container form .buttons .reset{
-    background-color: var(--primary-color);
+    background-color: #FFF;
+    font-weight: 600;
 }
 .booking-form-container form .buttons .reset:hover{
     background-color: #da1717;
