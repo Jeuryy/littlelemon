@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import BookingForm from './BookingForm';
 import './BookingPage.css'
 import Footer from './Footer';
