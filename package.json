@@ -1,7 +1,7 @@
 {
   "name": "littlelemon",
   "version": "0.1.0",
-  "homepage": "https://jeuryy.github.io/littlelemon",
+  "homepage": "https://Jeuryy.github.io/littlelemon",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",

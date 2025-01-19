@@ -44,9 +44,6 @@ useEffect(() => {
   })
 }, [])
 
-/*useEffect(() => {
-  console.log(fetchAPI(new Date()))
-}, [])*/
 
   return (
     <BrowserRouter>
